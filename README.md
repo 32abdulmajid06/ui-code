@@ -1,4 +1,4 @@
-hi# UI Generator – Ready-to-Use UI Components
+# UI Generator – Ready-to-Use UI Components
 A simple and powerful UI Generator that allows users to create beautiful, ready-to-use HTML, CSS, and JavaScript components.  
 This tool helps developers build modern and responsive UI elements quickly with clean and reusable code. 
 
@@ -53,5 +53,5 @@ This tool helps developers build modern and responsive UI elements quickly with 
 5. Paste directly into your project — done! ✔
 
 ## 💻 Run Locally
-git clone https://github.com/23abdulmajid06/ui-code.git
+git clone https://github.com/32abdulmajid06/ui-code.git
 cd ui-code
