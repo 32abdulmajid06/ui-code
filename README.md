@@ -53,5 +53,5 @@ This tool helps developers build modern and responsive UI elements quickly with 
 5. Paste directly into your project — done! ✔
 
 ## 💻 Run Locally
-git clone https://github.com/abdulmajid12/ui-code.git
+git clone https://github.com/23abdulmajid06/ui-code.git
 cd ui-code
