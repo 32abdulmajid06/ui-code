@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components - UI Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">UI Generator</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="nav-dropdown">
+                    <a href="component.html" class="nav-link dropdown-toggle active">
+                        Components <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#buttons" class="dropdown-item">Buttons</a>
+                        <a href="#forms" class="dropdown-item">Forms</a>
+                        <a href="#cards" class="dropdown-item">Cards</a>
+                        <a href="#grids" class="dropdown-item">Grids</a>
+                        <a href="#navbar" class="dropdown-item">Navbar</a>
+                        <a href="#footer" class="dropdown-item">Footer</a>
+                        <a href="#slider" class="dropdown-item">Slider</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="overview.html" class="nav-link">Overview</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="sidebar">
+            <h3>Components</h3>
+            <nav class="sidebar-nav">
+                <a href="#buttons" class="sidebar-link active">
+                    <i class="fas fa-square"></i> Button Generator
+                </a>
+                <a href="#grids" class="sidebar-link">
+                    <i class="fas fa-th"></i> Grid Generator
+                </a>
+                <a href="#forms" class="sidebar-link">
+                    <i class="fas fa-wpforms"></i> Form Generator
+                </a>
+                <a href="#navBar" class="sidebar-link">
+                    <i class="fas fa-bars"></i> Navbar Generator
+                </a>
+                <a href="#cards" class="sidebar-link">
+                    <i class="fas fa-id-card"></i> Card Generator
+                </a>
+                <a href="#footer" class="sidebar-link">
+                    <i class="fas fa-window-minimize"></i> Footer Generator
+                </a>
+                <a href="#slider" class="sidebar-link">
+                    <i class="fas fa-sliders-h"></i> Slider Generator
+                </a>
+            </nav>
+        </div>
+
+        <div class="content">
+            <!-- Button Generator -->
+            <section id="buttons" class="generator-section">
+                <div class="generator-header">
+                    <h2><i class="fas fa-square"></i> Button Generator</h2>
+                    <p>Create customizable buttons with various styles and effects.</p>
+                </div>
+                
+                <div class="generator-container">
+                    <div class="controls">
+                        <h3>Customize Button</h3>
+                        <div class="control-group">
+                            <label for="btn-text">Button Text:</label>
+                            <input type="text" id="btn-text" value="Click Me" />
+                        </div>
+                        <div class="control-group">
+                            <label for="btn-style">Style:</label>
+                            <select id="btn-style">
+                                <option value="solid">Solid</option>
+                                <option value="outline">Outline</option>
+                                <option value="ghost">Ghost</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="btn-color">Color:</label>
+                            <select id="btn-color">
+                                <option value="primary">Primary</option>
+                                <option value="secondary">Secondary</option>
+                                <option value="success">Success</option>
+                                <option value="danger">Danger</option>
+                                <option value="warning">Warning</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="btn-size">Size:</label>
+                            <select id="btn-size">
+                                <option value="small">Small</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="btn-rounded">Rounded:</label>
+                            <input type="checkbox" id="btn-rounded" />
+                        </div>
+                    </div>
+
+                    <div class="preview-section">
+                        <h3>Live Preview</h3>
+                        <div class="preview-area" id="btn-preview">
+                            <button class="btn btn-primary btn-medium">Click Me</button>
+                        </div>
+                    </div>
+
+                    <div class="code-section">
+                        <div class="code-tabs">
+                            <button class="tab-btn active" data-tab="btn-html">HTML</button>
+                            <button class="tab-btn" data-tab="btn-css">CSS</button>
+                        </div>
+                        <div class="code-content">
+                            <div id="btn-html" class="code-tab active">
+                                <button class="copy-btn" onclick="copyCode('btn-html-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                                <pre><code id="btn-html-code" class="language-html"></code></pre>
+                            </div>
+                            <div id="btn-css" class="code-tab">
+                                <button class="copy-btn" onclick="copyCode('btn-css-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                                <pre><code id="btn-css-code" class="language-css"></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Grid Generator -->
+            <section id="grids" class="generator-section">
+                <div class="generator-header">
+                    <h2><i class="fas fa-th"></i> Grid Generator</h2>
+                    <p>Create responsive CSS Grid layouts with customizable columns and gaps.</p>
+                </div>
+                
+                <div class="generator-container">
+                    <div class="controls">
+                        <h3>Customize Grid</h3>
+                        <div class="control-group">
+                            <label for="grid-columns">Columns:</label>
+                            <input type="range" id="grid-columns" min="1" max="6" value="3" />
+                            <span id="grid-columns-value">3</span>
+                        </div>
+                        <div class="control-group">
+                            <label for="grid-gap">Gap (px):</label>
+                            <input type="range" id="grid-gap" min="5" max="50" value="20" />
+                            <span id="grid-gap-value">20px</span>
+                        </div>
+                        <div class="control-group">
+                            <label for="grid-items">Items:</label>
+                            <input type="range" id="grid-items" min="3" max="12" value="6" />
+                            <span id="grid-items-value">6</span>
+                        </div>
+                    </div>
+
+                    <div class="preview-section">
+                        <h3>Live Preview</h3>
+                        <div class="preview-area" id="grid-preview">
+                            <div class="grid-container">
+                                <div class="grid-item">Item 1</div>
+                                <div class="grid-item">Item 2</div>
+                                <div class="grid-item">Item 3</div>
+                                <div class="grid-item">Item 4</div>
+                                <div class="grid-item">Item 5</div>
+                                <div class="grid-item">Item 6</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="code-section">
+                        <div class="code-tabs">
+                            <button class="tab-btn active" data-tab="grid-html">HTML</button>
+                            <button class="tab-btn" data-tab="grid-css">CSS</button>
+                        </div>
+                        <div class="code-content">
+                            <div id="grid-html" class="code-tab active">
+                                <button class="copy-btn" onclick="copyCode('grid-html-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                                <pre><code id="grid-html-code" class="language-html"></code></pre>
+                            </div>
+                            <div id="grid-css" class="code-tab">
+                                <button class="copy-btn" onclick="copyCode('grid-css-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                                <pre><code id="grid-css-code" class="language-css"></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Form Generator -->
+            <section id="forms" class="generator-section">
+                <div class="generator-header">
+                    <h2><i class="fas fa-wpforms"></i> Form Generator</h2>
+                    <p>Generate responsive forms with various input types and validation.</p>
+                </div>
+                
+                <div class="generator-container">
+                    <div class="controls">
+                        <h3>Customize Form</h3>
+                        <div class="control-group">
+                            <label for="form-fields">Fields:</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" id="field-name" checked> Name</label>
+                                <label><input type="checkbox" id="field-email" checked> Email</label>
+                                <label><input type="checkbox" id="field-phone"> Phone</label>
+                                <label><input type="checkbox" id="field-message" checked> Message</label>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="form-style">Style:</label>
+                            <select id="form-style">
+                                <option value="modern">Modern</option>
+                                <option value="classic">Classic</option>
+                                <option value="minimal">Minimal</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="preview-section">
+                        <h3>Live Preview</h3>
+                        <div class="preview-area" id="form-preview">
+                            <form class="generated-form modern-form">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="form-submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="code-section">
+                        <div class="code-tabs">
+                            <button class="tab-btn active" data-tab="form-html">HTML</button>
+                            <button class="tab-btn" data-tab="form-css">CSS</button>
+                        </div>
+                        <div class="code-content">
+                            <div id="form-html" class="code-tab active">
+                                <button class="copy-btn" onclick="copyCode('form-html-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                                <pre><code id="form-html-code" class="language-html"></code></pre>
+                            </div>
+                            <div id="form-css" class="code-tab">
+                                <button class="copy-btn" onclick="copyCode('form-css-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                                <pre><code id="form-css-code" class="language-css"></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navbar Generator -->
+            <section id="navBar" class="generator-section">
+                <div class="generator-header">
+                    <h2><i class="fas fa-bars"></i> Navbar Generator</h2>
+                    <p>Create responsive navigation bars with customizable styling.</p>
+                </div>
+                
+                <div class="generator-container">
+                    <div class="controls">
+                        <h3>Customize Navbar</h3>
+                        <div class="control-group">
+                            <label for="nav-brand">Brand Text:</label>
+                            <input type="text" id="nav-brand" value="Brand" />
+                        </div>
+                        <div class="control-group">
+                            <label for="nav-theme">Theme:</label>
+                            <select id="nav-theme">
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                                <option value="colored">Colored</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="nav-position">Position:</label>
+                            <select id="nav-position">
+                                <option value="static">Static</option>
+                                <option value="sticky">Sticky</option>
+                                <option value="fixed">Fixed</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="preview-section">
+                        <h3>Live Preview</h3>
+                        <div class="preview-area" id="navbar-preview">
+                            <nav class="generated-navbar light-theme">
+                                <div class="navbar-container">
+                                    <div class="navbar-brand">Brand</div>
+                                    <div class="navbar-menu">
+                                        <a href="#" class="navbar-link">Home</a>
+                                        <a href="#" class="navbar-link">About</a>
+                                        <a href="#" class="navbar-link">Services</a>
+                                        <a href="#" class="navbar-link">Contact</a>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="code-section">
+                        <div class="code-tabs">
+                            <button class="tab-btn active" data-tab="navbar-html">HTML</button>
+                            <button class="tab-btn" data-tab="navbar-css">CSS</button>
+                        </div>
+                        <div class="code-content">
+                            <div id="navbar-html" class="code-tab active">
+                                <button class="copy-btn" onclick="copyCode('navbar-html-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                                <pre><code id="navbar-html-code" class="language-html"></code></pre>
+                            </div>
+                            <div id="navbar-css" class="code-tab">
+                                <button class="copy-btn" onclick="copyCode('navbar-css-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                                <pre><code id="navbar-css-code" class="language-css"></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card Generator -->
+            <section id="cards" class="generator-section">
+                <div class="generator-header">
+                    <h2><i class="fas fa-id-card"></i> Card Generator</h2>
+                    <p>Design beautiful cards with various layouts and effects.</p>
+                </div>
+                
+                <div class="generator-container">
+                    <div class="controls">
+                        <h3>Customize Card</h3>
+                        <div class="control-group">
+                            <label for="card-title">Title:</label>
+                            <input type="text" id="card-title" value="Card Title" />
+                        </div>
+                        <div class="control-group">
+                            <label for="card-content">Content:</label>
+                            <textarea id="card-content" rows="3">This is some sample content for the card. You can customize this text.</textarea>
+                        </div>
+                        <div class="control-group">
+                            <label for="card-style">Style:</label>
+                            <select id="card-style">
+                                <option value="basic">Basic</option>
+                                <option value="elevated">Elevated</option>
+                                <option value="bordered">Bordered</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="card-image">Include Image:</label>
+                            <input type="checkbox" id="card-image" />
+                        </div>
+                        <div class="control-group">
+                            <label for="card-button">Include Button:</label>
+                            <input type="checkbox" id="card-button" checked />
+                        </div>
+                    </div>
+
+                    <div class="preview-section">
+                        <h3>Live Preview</h3>
+                        <div class="preview-area" id="card-preview">
+                            <div class="generated-card basic-card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Card Title</h3>
+                                    <p class="card-text">This is some sample content for the card. You can customize this text.</p>
+                                    <button class="card-button">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="code-section">
+                        <div class="code-tabs">
+                            <button class="tab-btn active" data-tab="card-html">HTML</button>
+                            <button class="tab-btn" data-tab="card-css">CSS</button>
+                        </div>
+                        <div class="code-content">
+                            <div id="card-html" class="code-tab active">
+                                <button class="copy-btn" onclick="copyCode('card-html-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                                <pre><code id="card-html-code" class="language-html"></code></pre>
+                            </div>
+                            <div id="card-css" class="code-tab">
+                                <button class="copy-btn" onclick="copyCode('card-css-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                                <pre><code id="card-css-code" class="language-css"></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Generator -->
+            <section id="footer" class="generator-section">
+                <div class="generator-header">
+                    <h2><i class="fas fa-window-minimize"></i> Footer Generator</h2>
+                    <p>Create professional footers with links and copyright information.</p>
+                </div>
+                
+                <div class="generator-container">
+                    <div class="controls">
+                        <h3>Customize Footer</h3>
+                        <div class="control-group">
+                            <label for="footer-company">Company Name:</label>
+                            <input type="text" id="footer-company" value="Your Company" />
+                        </div>
+                        <div class="control-group">
+                            <label for="footer-year">Year:</label>
+                            <input type="text" id="footer-year" value="2025" />
+                        </div>
+                        <div class="control-group">
+                            <label for="footer-theme">Theme:</label>
+                            <select id="footer-theme">
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                                <option value="colored">Colored</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="footer-links">Include Links:</label>
+                            <input type="checkbox" id="footer-links" checked />
+                        </div>
+                        <div class="control-group">
+                            <label for="footer-social">Include Social Links:</label>
+                            <input type="checkbox" id="footer-social" />
+                        </div>
+                    </div>
+
+                    <div class="preview-section">
+                        <h3>Live Preview</h3>
+                        <div class="preview-area" id="footer-preview">
+                            <footer class="generated-footer light-theme">
+                                <div class="footer-content">
+                                    <div class="footer-links">
+                                        <a href="#">Privacy Policy</a>
+                                        <a href="#">Terms of Service</a>
+                                        <a href="#">Contact</a>
+                                    </div>
+                                    <div class="footer-copyright">
+                                        &copy; 2025 Your Company. All rights reserved.
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <div class="code-section">
+                        <div class="code-tabs">
+                            <button class="tab-btn active" data-tab="footer-html">HTML</button>
+                            <button class="tab-btn" data-tab="footer-css">CSS</button>
+                        </div>
+                        <div class="code-content">
+                            <div id="footer-html" class="code-tab active">
+                                <button class="copy-btn" onclick="copyCode('footer-html-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                                <pre><code id="footer-html-code" class="language-html"></code></pre>
+                            </div>
+                            <div id="footer-css" class="code-tab">
+                                <button class="copy-btn" onclick="copyCode('footer-css-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                                <pre><code id="footer-css-code" class="language-css"></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slider Generator -->
+            <section id="slider" class="generator-section">
+                <div class="generator-header">
+                    <h2><i class="fas fa-sliders-h"></i> Slider Generator</h2>
+                    <p>Create interactive image sliders and carousels.</p>
+                </div>
+                
+                <div class="generator-container">
+                    <div class="controls">
+                        <h3>Customize Slider</h3>
+                        <div class="control-group">
+                            <label for="slider-slides">Number of Slides:</label>
+                            <input type="range" id="slider-slides" min="2" max="5" value="3" />
+                            <span id="slider-slides-value">3</span>
+                        </div>
+                        <div class="control-group">
+                            <label for="slider-autoplay">Autoplay:</label>
+                            <input type="checkbox" id="slider-autoplay" checked />
+                        </div>
+                        <div class="control-group">
+                            <label for="slider-indicators">Show Indicators:</label>
+                            <input type="checkbox" id="slider-indicators" checked />
+                        </div>
+                        <div class="control-group">
+                            <label for="slider-arrows">Show Navigation Arrows:</label>
+                            <input type="checkbox" id="slider-arrows" checked />
+                        </div>
+                    </div>
+
+                    <div class="preview-section">
+                        <h3>Live Preview</h3>
+                        <div class="preview-area" id="slider-preview">
+                            <div class="generated-slider">
+                                <div class="slider-container">
+                                    <div class="slide active">
+                                        <div class="slide-content">Slide 1</div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="slide-content">Slide 2</div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="slide-content">Slide 3</div>
+                                    </div>
+                                </div>
+                                <button class="slider-btn prev-btn">&#8249;</button>
+                                <button class="slider-btn next-btn">&#8250;</button>
+                                <div class="slider-indicators">
+                                    <span class="indicator active"></span>
+                                    <span class="indicator"></span>
+                                    <span class="indicator"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="code-section">
+                        <div class="code-tabs">
+                            <button class="tab-btn active" data-tab="slider-html">HTML</button>
+                            <button class="tab-btn" data-tab="slider-css">CSS</button>
+                            <button class="tab-btn" data-tab="slider-js">JavaScript</button>
+                        </div>
+                        <div class="code-content">
+                            <div id="slider-html" class="code-tab active">
+                                <button class="copy-btn" onclick="copyCode('slider-html-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                                <pre><code id="slider-html-code" class="language-html"></code></pre>
+                            </div>
+                            <div id="slider-css" class="code-tab">
+                                <button class="copy-btn" onclick="copyCode('slider-css-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                                <pre><code id="slider-css-code" class="language-css"></code></pre>
+                            </div>
+                            <div id="slider-js" class="code-tab">
+                                <button class="copy-btn" onclick="copyCode('slider-js-code')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                                <pre><code id="slider-js-code" class="language-javascript"></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 UI Generator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="main.js"></script>
+    <script src="component.js"></script>
+</body>
+</html>

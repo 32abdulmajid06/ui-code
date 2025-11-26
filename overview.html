@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview - UI Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">UI Generator</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="nav-dropdown">
+                    <a href="component.html" class="nav-link dropdown-toggle">
+                        Components <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="components.html#buttons" class="dropdown-item">Buttons</a>
+                        <a href="components.html#forms" class="dropdown-item">Forms</a>
+                        <a href="components.html#cards" class="dropdown-item">Cards</a>
+                        <a href="components.html#grids" class="dropdown-item">Grids</a>
+                        <a href="components.html#navbar" class="dropdown-item">Navbar</a>
+                        <a href="components.html#footer" class="dropdown-item">Footer</a>
+                        <a href="components.html#slider" class="dropdown-item">Slider</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="overview.html" class="nav-link active">Overview</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Overview Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>How to Use UI Generator</h1>
+            <p>Learn how to make the most of our component generators</p>
+        </div>
+    </section>
+
+    <!-- Instructions Section -->
+    <section class="instructions">
+        <div class="container">
+            <h2 class="section-title">Getting Started</h2>
+            <div class="instruction-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Choose a Component</h3>
+                        <p>Navigate to the Components page and select the UI element you want to generate from our
+                            collection of 7 different generators.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Customize Settings</h3>
+                        <p>Use the control panel to adjust colors, sizes, styles, and other properties. See your changes
+                            reflected instantly in the live preview.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Copy the Code</h3>
+                        <p>Click the "Copy" button to copy the HTML and CSS code to your clipboard. You can copy each
+                            section separately or all at once.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Implement in Your Project</h3>
+                        <p>Paste the copied code into your project files. The generated code is clean, semantic, and
+                            ready to use immediately.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Component Guide -->
+    <section class="component-guide">
+        <div class="container">
+            <h2 class="section-title">Component Guide</h2>
+            <div class="guide-grid">
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <i class="fas fa-square"></i>
+                    </div>
+                    <h3>Button Generator</h3>
+                    <p>Create buttons with different styles (solid, outline, ghost), colors, sizes, and border radius
+                        options.</p>
+                    <ul>
+                        <li>Multiple style variants</li>
+                        <li>Color themes</li>
+                        <li>Size options</li>
+                        <li>Rounded corners</li>
+                    </ul>
+                </div>
+
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <i class="fas fa-th"></i>
+                    </div>
+                    <h3>Grid Generator</h3>
+                    <p>Build responsive CSS Grid layouts with customizable columns, gaps, and item counts.</p>
+                    <ul>
+                        <li>Flexible column count</li>
+                        <li>Adjustable gaps</li>
+                        <li>Dynamic item generation</li>
+                        <li>Responsive design</li>
+                    </ul>
+                </div>
+
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <i class="fas fa-wpforms"></i>
+                    </div>
+                    <h3>Form Generator</h3>
+                    <p>Generate forms with various input types and styling themes for different use cases.</p>
+                    <ul>
+                        <li>Multiple input types</li>
+                        <li>Theme options</li>
+                        <li>Validation ready</li>
+                        <li>Accessible markup</li>
+                    </ul>
+                </div>
+
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <h3>Navbar Generator</h3>
+                    <p>Create responsive navigation bars with different themes and positioning options.</p>
+                    <ul>
+                        <li>Theme variations</li>
+                        <li>Position options</li>
+                        <li>Mobile responsive</li>
+                        <li>Custom branding</li>
+                    </ul>
+                </div>
+
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>Card Generator</h3>
+                    <p>Design beautiful cards with various layouts, styles, and optional elements.</p>
+                    <ul>
+                        <li>Style variants</li>
+                        <li>Optional images</li>
+                        <li>Custom content</li>
+                        <li>Action buttons</li>
+                    </ul>
+                </div>
+
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <i class="fas fa-window-minimize"></i>
+                    </div>
+                    <h3>Footer Generator</h3>
+                    <p>Create professional footers with links, social media, and copyright information.</p>
+                    <ul>
+                        <li>Theme options</li>
+                        <li>Link sections</li>
+                        <li>Social media links</li>
+                        <li>Copyright text</li>
+                    </ul>
+                </div>
+
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Slider Generator</h3>
+                    <p>Build interactive sliders with autoplay, indicators, and navigation controls.</p>
+                    <ul>
+                        <li>Multiple slides</li>
+                        <li>Autoplay option</li>
+                        <li>Navigation arrows</li>
+                        <li>Slide indicators</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Practices -->
+    <section class="best-practices">
+        <div class="container">
+            <h2 class="section-title">Best Practices</h2>
+            <div class="practices-grid">
+                <div class="practice-item">
+                    <h3><i class="fas fa-check-circle"></i> Code Organization</h3>
+                    <p>Keep HTML, CSS, and JavaScript in separate files for better maintainability and organization.</p>
+                </div>
+
+                <div class="practice-item">
+                    <h3><i class="fas fa-check-circle"></i> Responsive Design</h3>
+                    <p>Test your components on different screen sizes to ensure they work well across all devices.</p>
+                </div>
+
+                <div class="practice-item">
+                    <h3><i class="fas fa-check-circle"></i> Accessibility</h3>
+                    <p>The generated code includes accessibility features, but always test with screen readers and
+                        keyboard navigation.</p>
+                </div>
+
+                <div class="practice-item">
+                    <h3><i class="fas fa-check-circle"></i> Performance</h3>
+                    <p>Minimize CSS and JavaScript where possible, and optimize images for faster loading times.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I modify the generated code? <i class="fas fa-chevron-down"></i></h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! The generated code is meant to be a starting point. You can modify colors,
+                            spacing, fonts, and any other properties to match your design requirements.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I need to credit UI Generator when using the code? <i class="fas fa-chevron-down"></i>
+                        </h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, you don't need to provide attribution. The generated code is free to use in personal and
+                            commercial projects without any restrictions.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are the components compatible with CSS frameworks? <i class="fas fa-chevron-down"></i></h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, the generated components use standard CSS properties and can be easily integrated with
+                            popular frameworks like Bootstrap, Tailwind CSS, or your custom CSS framework.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I report bugs or request features? <i class="fas fa-chevron-down"></i></h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can contact us through the About page or send us an email at contact@uigenerator.com. We
+                            appreciate feedback and feature suggestions!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do the components work in all browsers? <i class="fas fa-chevron-down"></i></h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The generated components are designed to work in all modern browsers. We use standard CSS
+                            properties and include fallbacks for better compatibility.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I save my customizations? <i class="fas fa-chevron-down"></i></h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, UI Generator doesn't include a save feature, but you can bookmark the page with
+                            your settings or copy the generated code to save your customizations locally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 UI Generator. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const answer = item.querySelector('.faq-answer');
+                const icon = question.querySelector('i');
+
+                item.classList.toggle('active');
+
+                if (item.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    answer.style.maxHeight = '0';
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+    </script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Generator - Ready-to-use UI Snippets</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!--Navigation bar-->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">UI Generator</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="nav-dropdown">
+                    <a href="component.html" class="nav-link dropdown-toggle">
+                        Components <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="component.html#buttons" class="dropdown-item">Buttons</a>
+                        <a href="component.html#grids" class="dropdown-item">Grids</a>
+                        <a href="component.html#forms" class="dropdown-item">Forms</a>
+                        <a href="component.html#navbar" class="dropdown-item">Navbar</a>
+                        <a href="component.html#cards" class="dropdown-item">Cards</a>
+                        <a href="component.html#footer" class="dropdown-item">Footer</a>
+                        <a href="component.html#slider" class="dropdown-item">Slider</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="overview.html" class="nav-link">Overview</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!---Hero Section--->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Create Beautiful UI Components</h1>
+                <p class="hero-description">
+                    Generate ready-to-use HTML, CSS, and JavaScript snippets for your web projects.
+                    Build modern, responsive UI components with our interactive generators.
+                </p>
+                <a href="component.html" class="hero-button">
+                    <i class="fas fa-code"></i> Start Generating
+                </a>
+            </div>
+            <div class="hero-image">
+                <div class="preview-grid">
+
+                    <!-- Button -->
+                    <div class="preview-item">
+                        <div class="sample-button">Click Me</div>
+                        <p class="preview-label">Button</p>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="preview-item">
+                        <div class="sample-card">
+                            <div class="card-header"></div>
+                            <div class="card-content">
+                                <div class="card-line"></div>
+                                <div class="card-line short"></div>
+                            </div>
+                        </div>
+                        <p class="preview-label">Card</p>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="preview-item">
+                        <div class="sample-form">
+                            <div class="form-field"></div>
+                            <div class="form-field"></div>
+                            <div class="form-button"></div>
+                        </div>
+                        <p class="preview-label">Form</p>
+                    </div>
+
+                    <!-- Grid -->
+                    <div class="preview-item">
+                        <div class="sample-grid">
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                            <div class="grid-item"></div>
+                        </div>
+                        <p class="preview-label">Grid</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!---Features Saection--->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose UI Generator?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Generation</h3>
+                    <p>Create UI components in seconds eith our intuitive generators.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>All grenerated components are mobile-friendly and responsive.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-copy"></i>
+                    </div>
+                    <h3>Copy & Paste</h3>
+                    <p>One-click code copying for seamless integration into your projects.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Live Preview</h3>
+                    <p>See u=your changes in real-time eith instant preview updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 UI Generator.All rights reserved.</p>
+        </div>
+    </footer>
+
+<script src="main.js"></script>
+</body>
+
+</html>
